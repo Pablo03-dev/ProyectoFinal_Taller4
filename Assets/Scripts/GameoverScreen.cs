@@ -10,7 +10,7 @@ public class GameoverScreen : MonoBehaviour
     //public TMP_Text pointsText;
     private bool JuegoPausado = false;
 
-    public void Setup(int score)
+    public void Setup(float time)
     {
         gameObject.SetActive(true);
         //pointsText.text = "Score: " + score.ToString();

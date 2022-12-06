@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
    public void GameOver()
     {
         print("EndGame");
-        //GameOverScreen.Setup(gameTime);
+        GameOverScreen.Setup(gameTime);
     }
 
 
