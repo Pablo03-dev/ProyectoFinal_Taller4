@@ -7,9 +7,13 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager manager;
 
-    public Slider barrahp;
-    private int score;
-    public Text scoreText;
+    //public Slider barrahp;
+
+    public Slider barraTime;
+    public float time;
+
+    //private int score;
+    //public Text scoreText;
 
     //public Transform posReseteo;
     //public Rigidbody2D rb;
@@ -20,18 +24,19 @@ public class GameManager : MonoBehaviour
     public GameoverScreen GameOverScreen;
 
 
-    private void Awake()
-    {
-        manager = this;
-        score = 0;
-        UpdatedScore();
-    }
+    //private void Awake()
+    //{
+    //    manager = this;
+    //    score = 0;
+    //    UpdatedScore();
+    //}
 
-    public int vidas;
+    //public int vidas;
+
    public void GameOver()
     {
         print("EndGame");
-        GameOverScreen.Setup(score);
+        //GameOverScreen.Setup(score);
     }
 
 
@@ -45,54 +50,28 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void QuitarVidas()
+    public void QuitarTiempo()
     {
-        vidas--;
-        barrahp.value = vidas;
 
-        if(vidas < 1)
+        if (time < 0)
         {
             GameOver();
-            //Over.Show();
         }
+
     }
 
     void UpdatedScore()
     {
-        scoreText.text = "Score: " + score;
+        //scoreText.text = "Score: " + score;
     }
 
     public void AddScore(int puntajesumaar)
     {
-        score += puntajesumaar;
+        //score += puntajesumaar;
         //Audiomanager.PlaySound("Coin");
         UpdatedScore();
     }
 
-    //public void ResetearPosicion(Transform _transform)
-    //{
-    //    _transform.position = posReseteo.position;
-    //    rb.velocity = Vector2.zero;
-    //}
-
-    //private void Update()
-    //{
-    //    timer = Time.deltaTime + timer;
-    //}
-
-    //private void Update()
-    //{
-    //    if (juegoPausado)
-    //    {
-    //        Pausa();
-    //    }
-    //}
-    //public void Pausa()
-    //{
-    //    juegoPausado = true;
-    //    Time.timeScale = 0f;
-    //    //botonPausa.SetActive(false);
-    //    //menuPausa.SetActive(true);
-    //}
+   
 
 }
