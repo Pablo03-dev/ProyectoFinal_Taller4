@@ -33,8 +33,6 @@ public class GameManager : MonoBehaviour
     //    UpdatedScore();
     }
 
-    //public int vidas;
-
    public void GameOver()
     {
         print("EndGame");
@@ -95,7 +93,6 @@ public class GameManager : MonoBehaviour
             stopTimer = true;
             GameOver();
 
-            //GameManager.manager.QuitarTiempo();
         }
 
         if (stopTimer == false)
