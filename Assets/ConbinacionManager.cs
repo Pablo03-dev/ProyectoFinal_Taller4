@@ -15,6 +15,7 @@ public class ConbinacionManager : MonoBehaviour
     public Sprite[] instrumentos;
     public List<int> secuencia = new List<int>();
     public int indiceSecuencia = 0;
+    public Publico publico;
 
 
     private void Start()
@@ -22,6 +23,7 @@ public class ConbinacionManager : MonoBehaviour
         ElegirCantidad(4);
         ActivarSlot();
         ElegirInstrumento();
+        ElegirPublico();
     }
 
     void ElegirCantidad(int _cantidad)
@@ -68,12 +70,18 @@ public class ConbinacionManager : MonoBehaviour
         // resetear indiceSecuencia
         // apagar los slots
         // apagar los circulos
+        GameManager.manager.completoSecuencia = true;
         print("Completo");
     }
 
     void ChequearSecuencia()
     {
 
+    }
+
+    void ElegirPublico()
+    {
+        publico.SeleccionarGente();
     }
 
 }

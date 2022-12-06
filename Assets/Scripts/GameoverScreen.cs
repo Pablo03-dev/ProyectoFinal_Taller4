@@ -7,13 +7,13 @@ using TMPro;
 
 public class GameoverScreen : MonoBehaviour
 {
-    public TMP_Text pointsText;
+    //public TMP_Text pointsText;
     private bool JuegoPausado = false;
 
     public void Setup(int score)
     {
         gameObject.SetActive(true);
-        pointsText.text = "Score: " + score.ToString();
+        //pointsText.text = "Score: " + score.ToString();
 
         JuegoPausado = true;
         Pausa();
